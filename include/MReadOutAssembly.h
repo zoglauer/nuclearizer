@@ -313,6 +313,12 @@ class MReadOutAssembly : public MReadOutSequence
   //! Unique assembly identifier
   unsigned long m_AssemblyID;
 
+  //! Unique assembly identifier counter
+  static atomic<unsigned long> s_NextAssemblyID;
+
+  //! Unique assembly identifier
+  unsigned long m_AssemblyID;
+
   //! Clock tick (Unix and UHF)
   unsigned long long m_TI;
   uint64_t m_CL;
